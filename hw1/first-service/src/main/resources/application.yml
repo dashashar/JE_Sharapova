@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: first-service
+discovery:
+  service-name: first
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "instance1"
+server:
+  port: 8081
+discovery:
+  service-port: 8081
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "instance2"
+server:
+  port: 8083
+discovery:
+  service-port: 8083
